@@ -1,7 +1,7 @@
 const http = require("http");
 const fs = require("fs");
 var requests = require("requests")
-const port = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8000;
 
 const homeFile = fs.readFileSync("index.html", "utf-8");
 
@@ -39,6 +39,6 @@ const server = http.createServer((req, res) => {
     }
 });
 
-server.listen(port, () => {
+server.listen(PORT, () => {
     console.log(`listining to the port no at ${port}`);
-})
+});
